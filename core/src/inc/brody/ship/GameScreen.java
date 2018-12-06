@@ -510,17 +510,10 @@ public class GameScreen extends ScreenAdapter {
             for (int j = -1; j <= 1; j++) {
                 if(checkBounds(new int[]{temp[0],temp[1]},i,j)) {
                     if (cellsArray[temp[0]+ i][temp[1]+j] == -2){
-                            if(checkMore.size() > 2) {
-                                if (!(checkMore.get(checkMore.size() - 2)[0] == (temp[0] + i) && checkMore.get(checkMore.size() - 2)[1] == (temp[1] + j))) {
-                                    checkMore.add(new Integer[]{checkMore.get(checkMore.size() - 1)[0] + i, checkMore.get(checkMore.size() - 1)[1] + j});
-                                    checkForward(checkMore);
-                                }
-                            } else {
-                                if (!(checkMore.get(checkMore.size() - 2)[0] == (temp[0] + i) && checkMore.get(checkMore.size() - 2)[1] == (temp[1] + j))) {
-                                    checkMore.add(new Integer[]{checkMore.get(checkMore.size() - 1)[0] + i, checkMore.get(checkMore.size() - 1)[1] + j});
-                                    checkForward(checkMore);
-                                }
-                            }
+                        if (!(checkMore.get(checkMore.size() - 2)[0] == (temp[0] + i) && checkMore.get(checkMore.size() - 2)[1] == (temp[1] + j))) {
+                            checkMore.add(new Integer[]{checkMore.get(checkMore.size() - 1)[0] + i, checkMore.get(checkMore.size() - 1)[1] + j});
+                            checkForward(checkMore);
+                        }
                     }
                     if(cellsArray[temp[0]+ i][temp[1]+j] == 1) {
                                 if (!(checkMore.get(0)[0] == (temp[0] + i) && checkMore.get(0)[1] == (temp[1] + j))) {
