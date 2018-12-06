@@ -8,7 +8,7 @@ public class Battleship extends Game {
 	@Override
 	public void create () {
 		Assets.load();
-		setScreen(new GameScreen(game));
+		setScreen(new GameScreen(this));
 	}
 
 	@Override
