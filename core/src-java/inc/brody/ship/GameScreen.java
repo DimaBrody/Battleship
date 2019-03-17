@@ -31,6 +31,7 @@ public class GameScreen extends ScreenAdapter {
     private static final float WIDTH_FIELD = 560;
     private static final float WIDTH_CELL = WIDTH_FIELD/10;
 
+
     private int[][] cellsArray;
     private int[][] myCellsArray;
 
